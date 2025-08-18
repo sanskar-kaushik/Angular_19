@@ -1,0 +1,30 @@
+<div style="text-align: center;">
+    <h3>
+        One Way data binding
+    </h3>
+    <div>
+        <p>1. Interpolation</p>
+        <p>Hi I am {{name}} and I am working in {{company}}</p>
+    </div>
+    <div>
+        <p>2. Property Binding</p>
+        <input type="text" [value]="name">
+        <img style="width: 300px; display: block; margin: 10px auto 0;" [src]="picture" alt="nothing to be displayed">
+    </div>
+    <div>
+        <p>3. Event Binding</p>
+        <button (click)="onSave()">Save Button</button>
+        <select (change)="onChange()">
+            <option value="Spain">Spain</option>
+            <option value="UK">UK</option>
+            <option value="Germany">Germany</option>
+            <option value="Italy">Italy</option>
+            <option value="France">France</option>
+        </select>
+    </div>
+    <div>
+        <p>4. Two-way Data Binding</p>
+        <input type="text" [(ngModel)]="name">
+        {{name}}
+    </div>
+</div>

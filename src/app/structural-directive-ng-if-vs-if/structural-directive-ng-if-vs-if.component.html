@@ -1,0 +1,55 @@
+<div class="row text-center">
+    <div class="col-12 m-3">
+        <b>*ngIf vs if</b>
+    </div>
+</div>
+<!-- <div class="row text-center">
+    <div class="col-4">
+        <div>
+            <input type="checkbox" (click)="checkCheckbox()">Terms and Conditions
+            <h3 *ngIf="checkbox">Checkbox ticked</h3>
+        </div>
+    </div>
+    <div class="col-4">
+        <div>
+            <h3 *ngIf="buttonEnabled">Button enabled</h3>
+            <button class="btn btn-primary" (click)="clickButtoneEnabled()">Enabled</button>
+            <button class="btn btn-danger" (click)="clickButtonDisabled()">Disabled</button>
+        </div>
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="Input1" [(ngModel)]="input1">
+        <input type="text" placeholder="Input2" [(ngModel)]="input2">
+        <h3 *ngIf="input1 !== input2">Both are not equal</h3>
+        <h3 *ngIf="input1 === input2">Both are equal</h3>
+    </div>
+</div> -->
+<div class="row text-center">
+    <div class="col-4">
+        <div>
+            <input type="checkbox" (click)="checkCheckbox()">Terms and Conditions
+            @if(checkbox){
+                <h3>Checkbox ticked</h3>
+            }
+        </div>
+    </div>
+    <div class="col-4">
+        <div>
+            @if(buttonEnabled){
+                <h3>Button enabled</h3>
+            }
+            <button class="btn btn-primary" (click)="clickButtoneEnabled()">Enabled</button>
+            <button class="btn btn-danger" (click)="clickButtonDisabled()">Disabled</button>
+        </div>
+    </div>
+    <div class="col-4">
+        <input type="text" placeholder="Input1" [(ngModel)]="input1">
+        <input type="text" placeholder="Input2" [(ngModel)]="input2">
+        @if(input1 !== input2){
+            <h3>Both are not equal</h3>
+        }
+        @else if(input1 === input2){
+            <h3>Both are equal</h3>
+        }
+    </div>
+</div>
