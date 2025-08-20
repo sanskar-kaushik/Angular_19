@@ -1,1 +1,91 @@
-<p>structural-directive-ngfor-vs-for works!</p>
+<!-- <div class="row text-center">
+  <div class="col-12 m-3">
+    <b>*ngFor vs For</b>
+  </div>
+</div>
+<div class="row text-center">
+  <div class="col-3">
+    <select value="">
+      <option *ngFor="let emp of employeeDetails" [value]="emp.empEmail">
+        {{ emp.empName }} - {{ emp.empNum }}
+      </option>
+    </select>
+  </div>
+  <div class="col-6 m-2">
+    <table class="table table-bordered">
+      <thead>
+        <td>Name</td>
+        <td>Id</td>
+        <td>Email</td>
+        <td>Department</td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employeeDetails">
+          <td>{{ emp.empName }}</td>
+          <td>{{ emp.empNum }}</td>
+          <td>{{ emp.empEmail }}</td>
+          <td>{{ emp.empDept }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-2">
+    <ul>
+      <li *ngFor="let names of empNames">{{names}}</li>
+    </ul>
+  </div>
+</div> -->
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <b>*ngFor vs For</b>
+  </div>
+</div>
+<div class="row text-center">
+  <div class="col-3">
+    <select value="">
+      @for(emp of employeeDetails; track emp){
+      <option [value]="emp.empEmail">
+        {{ emp.empName }} - {{ emp.empNum }}
+      </option>
+      }
+    </select>
+  </div>
+  <div class="col-6 m-2">
+    <table class="table table-bordered">
+      <thead>
+        <td>Name</td>
+        <td>Id</td>
+        <td>Email</td>
+        <td>Department</td>
+      </thead>
+      <tbody>
+        @for(emp of employeeDetails; track emp){
+        <tr>
+          <td>{{ emp.empName }}</td>
+          <td>{{ emp.empNum }}</td>
+          <td>{{ emp.empEmail }}</td>
+          <td>{{ emp.empDept }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col-2">
+    <ul>
+      @for(names of empNames; track names; let f=$first, l=$last, e=$even, o=$odd, c=$count, i=$index){
+        @if(f === true){
+          <li style="color: green !important;">{{ names }}</li>
+        }
+        @else if(l === true){
+          <li style="color: red !important;">{{ names }}</li>
+        }
+        @else{
+          <li>{{ names }}</li>
+        }
+      }
+      @empty{
+        No employees present...
+      }
+    </ul>
+  </div>
+</div>
