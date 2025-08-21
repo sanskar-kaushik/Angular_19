@@ -1,0 +1,36 @@
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <b>*ngSwitch vs Switch</b>
+  </div>
+</div>
+<!-- <div class="row text-center">
+  <div class="col-12">
+    <button class="btn btn-primary m-3" (click)="set(1)">First</button>
+    <button class="btn btn-success m-3" (click)="set(2)">Second</button>
+    <button class="btn btn-warning m-3" (click)="set(3)">Third</button>
+  </div>
+  <div [ngSwitch]="count">
+    <div *ngSwitchCase="1">It is showing 1st case</div>
+    <div *ngSwitchCase="2">It is showing 2nd case</div>
+    <div *ngSwitchCase="3">It is showing 3rd case</div>
+    <div *ngSwitchDefault>It is showing default case</div>
+  </div>
+</div> -->
+<div class="row text-center">
+  <div class="col-12">
+    <button class="btn btn-primary m-3" (click)="set(1)">First</button>
+    <button class="btn btn-success m-3" (click)="set(2)">Second</button>
+    <button class="btn btn-warning m-3" (click)="set(3)">Third</button>
+  </div>
+  <div>
+    @switch(count){ @case(1){
+    <div>It is showing 1st case</div>
+    } @case(2){
+    <div>It is showing 2nd case</div>
+    } @case(3){
+    <div>It is showing 3rd case</div>
+    } @default{
+    <div>It is showing default case</div>
+    } }
+  </div>
+</div>
