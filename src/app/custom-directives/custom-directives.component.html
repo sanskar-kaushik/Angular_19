@@ -1,0 +1,66 @@
+<!-- Using complete code of attribute directive to perform custom directives -->
+<div appDisableCopyPaste>
+  <div class="row text-center">
+    <div class="col-12 m-3">
+      <b>ngClass directive</b>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-4">
+      <div>
+        <h3 [class]="textColor">This is 1st example of ng class</h3>
+        <button class="btn btn-success m-2" (click)="clickSuccess()">
+          Green
+        </button>
+        <button class="btn btn-danger m-2" (click)="clickDanger()">Red</button>
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <h3 [ngClass]="color ? 'text-success' : 'text-danger'">
+          This is 2nd example of ng class
+        </h3>
+        <input type="checkbox" [(ngModel)]="color" />Ng Class
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <h3 [class]="text">This is 3rd example of ng class</h3>
+        <input type="text" [(ngModel)]="text" />
+      </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-12 m-3">
+      <b>ngStyle directive</b>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-4">
+      <div>
+        <h3 [ngStyle]="{ color: updateColor }">
+          This is 1st example of ng style
+        </h3>
+        <button class="btn btn-warning m-2" (click)="updateWarning('orange')">
+          Orange
+        </button>
+        <button class="btn btn-primary m-2" (click)="updatePrimary('blue')">
+          Blue
+        </button>
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <h3 [ngStyle]="{ color: newColor ? 'orange' : 'red' + '!important' }">
+          This is 2nd example of ng style
+        </h3>
+        <input type="checkbox" [(ngModel)]="newColor" />Ng style
+      </div>
+    </div>
+    <div class="col-4">
+      <div>
+        <h3 [ngStyle]="customClass">This is 3rd example of ng style</h3>
+      </div>
+    </div>
+  </div>
+</div>
