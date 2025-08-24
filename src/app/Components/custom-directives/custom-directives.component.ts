@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DisableCopyPasteDirective } from '../Directive/disable-copy-paste.directive';
+import { DisableCopyPasteDirective } from '../../Directives/disable-copy-paste/disable-copy-paste.directive';
 
 @Component({
   selector: 'app-custom-directives',
