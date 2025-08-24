@@ -8,6 +8,7 @@ import { StructuralDirectivesNgSwitchVsSwitchComponent } from './structural-dire
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { SignalComponent } from './signal/signal.component';
+import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { SignalComponent } from './signal/signal.component';
     // StructuralDirectivesNgSwitchVsSwitchComponent,
     // AttributeDirectivesComponent,
     // CustomDirectivesComponent,
-    SignalComponent
+    // SignalComponent,
+    LinkedSignalComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
