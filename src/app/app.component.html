@@ -1,9 +1,25 @@
-<!-- <app-data-binding></app-data-binding> -->
-<!-- <app-directives></app-directives> -->
-<!-- <app-structural-directive-ng-if-vs-if></app-structural-directive-ng-if-vs-if> -->
-<!-- <app-structural-directive-ngfor-vs-for></app-structural-directive-ngfor-vs-for> -->
-<!-- <app-structural-directives-ng-switch-vs-switch></app-structural-directives-ng-switch-vs-switch> -->
-<!-- <app-attribute-directives></app-attribute-directives> -->
-<!-- <app-custom-directives></app-custom-directives> -->
-<!-- <app-signal></app-signal> -->
-<app-linked-signal></app-linked-signal>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}">User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/data-binding']" [routerLinkActiveOptions]="{exact: true}">Data Bindings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/structural-directives']" [routerLinkActiveOptions]="{exact: true}">Structural Directives</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/attribute-directives']" [routerLinkActiveOptions]="{exact: true}">Attribute Directives</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
