@@ -5,6 +5,7 @@ import { StructuralDirectiveNgIfVsIfComponent } from './Components/structural-di
 import { AttributeDirectivesComponent } from './Components/attribute-directives/attribute-directives.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { InbuiltPipesComponent } from './Components/inbuilt-pipes/inbuilt-pipes.component';
+import { TemplateDrivenFormComponent } from './Components/template-driven-form/template-driven-form.component';
 
 export const routes: Routes = [
   { path: '' , redirectTo: "user" , pathMatch:"full"},
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'structural-directives', component: StructuralDirectiveNgIfVsIfComponent},
   { path: 'attribute-directives', component: AttributeDirectivesComponent },
-  { path: 'inbuilt-pipes', component: InbuiltPipesComponent },
+  { path: 'pipes', component: InbuiltPipesComponent },
+  { path: 'tdf', component: TemplateDrivenFormComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
