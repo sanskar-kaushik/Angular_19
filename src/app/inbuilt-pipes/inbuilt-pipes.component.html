@@ -1,0 +1,39 @@
+<div class="m-3 row">
+    <div class="col-6">
+        <h3>String Pipes</h3>
+        <p>Uppercase Pipe: {{pipes | uppercase}}</p>
+        <p>Lowercase Pipe: {{pipes | lowercase}}</p>
+        <p>Titlecase Pipe: {{pipes | titlecase}}</p>
+        <p>Slice Pipe(6-9): {{pipes | slice: 6:9}}</p>
+        <p>Slice Pipe(6): {{pipes | slice: 6}}</p>
+        <p>Slice Pipe(6- -4): {{pipes | slice: 6:-4}}</p>
+        <p>Slice Pipe(-4): {{pipes | slice: -4}}</p>
+        <p>JSON pipe: {{data | json}}</p>
+        <pre>JSON pipe: {{data | json}}</pre>
+    </div>
+    <div class="col-4">
+        <h3>Number Pipes</h3>
+        <p>Date Pipe: {{date | date}}</p>
+        <p>Date-short Pipe: {{date | date: 'short'}}</p>
+        <p>Short Date Pipe: {{date | date: 'shortDate'}}</p>
+        <p>Short Time Pipe: {{date | date: 'shortTime'}}</p>
+        <p>Date-medium Pipe: {{date | date: 'medium'}}</p>
+        <p>Medium Date Pipe: {{date | date: 'mediumDate'}}</p>
+        <p>Medium Time Pipe: {{date | date: 'mediumTime'}}</p>
+        <p>Decimal Pipe: {{3.14259 | number:'1.3'}}</p>
+        <p>Decimal Pipe: {{3.14259 | number:'1.7'}}</p>
+        <p>Decimal Pipe: {{3.14259 | number:'2.3'}}</p>
+        <p>Currency Pipe: {{350 | currency}}</p>
+        <p>Currency Pipe: {{350 | currency: 'EUR'}}</p>
+        <p>Currency Pipe: {{350 | currency: 'INR'}}</p>
+        <p>Percent Pipe: {{.35 | percent}}</p>
+    </div>
+    <div class="col-2">
+        <h3>Async Pipes</h3>
+        <ul>
+            @for(item of list | async; track list){
+                <li>{{item}}</li>
+            }
+        </ul>
+    </div>
+</div>
