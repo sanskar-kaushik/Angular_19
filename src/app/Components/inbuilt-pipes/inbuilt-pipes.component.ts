@@ -3,10 +3,12 @@ import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { CustomPipesPipe } from '../../Pipes/custom-pipes.pipe';
 import { FormsModule } from '@angular/forms';
+import { PurePipe } from '../../Pipes/pure.pipe';
+import { ImpurePipe } from '../../Pipes/impure.pipe';
 
 @Component({
   selector: 'app-inbuilt-pipes',
-  imports: [CommonModule , CustomPipesPipe , FormsModule],
+  imports: [CommonModule , CustomPipesPipe , FormsModule , PurePipe , ImpurePipe],
   templateUrl: './inbuilt-pipes.component.html',
   styleUrl: './inbuilt-pipes.component.css'
 })

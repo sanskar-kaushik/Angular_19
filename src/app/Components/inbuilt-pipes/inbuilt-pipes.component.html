@@ -1,6 +1,7 @@
 <!-- Added custom pipe code in this component -->
+<!-- Added Pure vs Impure pipe code in this component -->
 <div class="m-3 row">
-    <div class="col-5">
+    <div class="col-4">
         <h3>String Pipes</h3>
         <p>Uppercase Pipe: {{pipes | uppercase}}</p>
         <p>Lowercase Pipe: {{pipes | lowercase}}</p>
@@ -12,7 +13,7 @@
         <p>JSON pipe: {{data | json}}</p>
         <pre>JSON pipe: {{data | json}}</pre>
     </div>
-    <div class="col-3">
+    <div class="col-2">
         <h3>Number Pipes</h3>
         <p>Date Pipe: {{date | date}}</p>
         <p>Date-short Pipe: {{date | date: 'short'}}</p>
@@ -47,5 +48,10 @@
         } -->
         <p>Mobile Number: {{mobile | customPipes:'phone'}}</p>
         <p>Date: {{mobile | customPipes:'date'}}</p>
+    </div>
+    <div class="col-2">
+        <h3>Pure vs Impure Pipes</h3>
+        <p>Pure Pipe: Square of 7 is {{7 | pure}}</p>
+        <p>Date is {{date | impure}}</p>
     </div>
 </div>
