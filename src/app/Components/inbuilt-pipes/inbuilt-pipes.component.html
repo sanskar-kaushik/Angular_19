@@ -1,5 +1,6 @@
+<!-- Added custom pipe code in this component -->
 <div class="m-3 row">
-    <div class="col-6">
+    <div class="col-5">
         <h3>String Pipes</h3>
         <p>Uppercase Pipe: {{pipes | uppercase}}</p>
         <p>Lowercase Pipe: {{pipes | lowercase}}</p>
@@ -11,7 +12,7 @@
         <p>JSON pipe: {{data | json}}</p>
         <pre>JSON pipe: {{data | json}}</pre>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <h3>Number Pipes</h3>
         <p>Date Pipe: {{date | date}}</p>
         <p>Date-short Pipe: {{date | date: 'short'}}</p>
@@ -35,5 +36,16 @@
                 <li>{{item}}</li>
             }
         </ul>
+    </div>
+    <div class="col-2">
+        <h3>Custom Pipes</h3>
+        <!-- <input type="radio" name="mode" value="phone" [(ngModel)]="mode"> phone number
+        <br>
+        <input type="radio" name="mode" value="date" [(ngModel)]="mode"> date
+        @if(mode === "phone"){
+            <p>Mobile Number: {{mobile | customPipes}}</p>
+        } -->
+        <p>Mobile Number: {{mobile | customPipes:'phone'}}</p>
+        <p>Date: {{mobile | customPipes:'date'}}</p>
     </div>
 </div>
