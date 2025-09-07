@@ -6,6 +6,7 @@ import { AttributeDirectivesComponent } from './Components/attribute-directives/
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { InbuiltPipesComponent } from './Components/inbuilt-pipes/inbuilt-pipes.component';
 import { TemplateDrivenFormComponent } from './Components/template-driven-form/template-driven-form.component';
+import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
 
 export const routes: Routes = [
   { path: '' , redirectTo: "user" , pathMatch:"full"},
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'attribute-directives', component: AttributeDirectivesComponent },
   { path: 'pipes', component: InbuiltPipesComponent },
   { path: 'tdf', component: TemplateDrivenFormComponent },
+  { path: 'rf', component: ReactiveFormsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
