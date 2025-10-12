@@ -1,0 +1,26 @@
+<div>
+    <h3>User Details:</h3>
+    <ul>
+        <li>{{userData.name}}</li>
+        <li>{{userData.userName}}</li>
+        <li>{{userData.number}}</li>
+        <li>{{userData.subscription}}</li>
+        <li>{{userData.email}}</li>
+    </ul>
+    <div>
+        @if(eligible){
+            <h3 class="text-success">This is our premium customer</h3>
+        }
+        @else{
+            <h3 class="text-danger">This is not our premium customer</h3>
+        }
+    </div>
+    <div>
+        <ul *ngFor="let data of api_data">
+            <li>{{data.name}}</li>
+            <li>{{data.username}}</li>
+            <li>{{data.id}}</li>
+            <li>{{data.email}}</li>
+        </ul>
+    </div>
+</div>
