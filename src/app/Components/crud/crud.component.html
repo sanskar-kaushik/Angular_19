@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="text-center m-4">
+        Crud Operations
+    </h2>
+    <table class="table table-stripped table-success">
+        <thead>
+            <tr>
+                <th class="col-2">Id</th>
+                <th class="col-2">Name</th>
+                <th class="col-2">Username</th>
+                <th class="col-3">Email</th>
+                <th class="col-1">Update</th>
+                <th class="col-1">View</th>
+                <th class="col-1">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of apiData">
+                <td class="col-2">{{data.id}}</td>
+                <td class="col-2">{{data.name}}</td>
+                <td class="col-2">{{data.username}}</td>
+                <td class="col-3">{{data.email}}</td>
+                <td class="col-1"> <button class="btn btn-warning" (click)="onUpdate(data.id)">Update</button></td>
+                <td class="col-1"> <button class="btn btn-secondary" (click)="onView(data.id)">View</button></td>
+                <td class="col-1"> <button class="btn btn-danger" (click)="onDelete(data.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-info center m-4 d-block mx-auto" (click)="addUser()">
+        Add User
+    </button>
+</div>
