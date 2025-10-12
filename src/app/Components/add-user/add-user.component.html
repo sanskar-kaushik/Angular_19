@@ -1,0 +1,21 @@
+<div class="container">
+    <form class="w-75 mt-5 p-5 mx-auto bg-info" [formGroup]="addUserForm" (ngSubmit)="OnSubmit()">
+        <h2 class="text-center m-3">Creating new user</h2>
+        <div class="form-group m-4">
+            <label class="form-label">Name:</label>
+            <input type="text" placeholder="Enter your name" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group m-4">
+            <label class="form-label">Username:</label>
+            <input type="text" placeholder="Enter your username" class="form-control" formControlName="username">
+        </div>
+        <div class="form-group m-4">
+            <label class="form-label">Email:</label>
+            <input type="email" placeholder="Enter your email" class="form-control" formControlName="email">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success m-2">Add</button>
+            <button class="btn btn-danger m-2" (click)="cancel()">Cancel</button>
+        </div>
+    </form>
+</div>

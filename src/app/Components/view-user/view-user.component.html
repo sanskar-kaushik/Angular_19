@@ -1,0 +1,17 @@
+@if(api_data){
+    <div class="container">
+    <div class="w-50 m-5 p-5 mx-auto bg-secondary text-white text-center rounded">
+        <h2 class="m-4">View Details</h2>
+        <div>
+            <p>Name: <b>{{api_data?.name}}</b></p>
+            <p>Username: <b>{{api_data?.username}}</b></p>
+            <p>Email: <b>{{api_data?.email}}</b></p>
+        </div>
+        <button class="btn btn-success" (click)="onCancel()">Close</button>
+    </div>
+    </div>
+}
+@else{
+    <h1 class="text-danger">You entered wrong id</h1>
+    <button class="btn btn-warning" (click)="onCancel()">Close</button>
+}
