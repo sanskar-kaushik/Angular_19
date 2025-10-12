@@ -7,10 +7,12 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import { InbuiltPipesComponent } from './Components/inbuilt-pipes/inbuilt-pipes.component';
 import { TemplateDrivenFormComponent } from './Components/template-driven-form/template-driven-form.component';
 import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
+import { ProfileComponent } from './Components/profile/profile.component';
 
 export const routes: Routes = [
   { path: '' , redirectTo: "user" , pathMatch:"full"},
   { path: 'user', component: UserComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'structural-directives', component: StructuralDirectiveNgIfVsIfComponent},
   { path: 'attribute-directives', component: AttributeDirectivesComponent },
